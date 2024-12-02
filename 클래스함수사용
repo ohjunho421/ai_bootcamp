@@ -1,0 +1,43 @@
+class Person: #Person이라는 클래스로 이름,성별,나이 정의하기
+    def __init__(self):
+        self.name = None
+        self.gender = None
+        self.age = None
+
+    def input_name(self): #이름을 input으로 받게하기 문자가 아니면 다시 입력하게 함
+        while True:
+            name = input('당신의 이름을 입력하세요. : ')
+            if name.isalpha():
+                self.name = name
+                break
+            else:
+                print('잘못입력하셨습니다. ')
+                
+    def input_gender(self): #성별을 남,여로만 입력을 받게함.
+        while True:
+            gender = input('당신의 성별을 입력하세요. : ')
+            if gender in ['남','여']:
+               self.gender = gender
+               break
+            else:
+                print('잘못 입력하셨습니다. 남,여 로만 입력해주세요.')
+
+    def input_age(self): #나이를 int를 활용하여 숫자만 입력하게함 
+        while True:
+            try : 
+                age = int(input('당신의 나이를 입력하세요. : '))
+                self.age = age
+                break
+            except ValueError:
+                print('숫자만 입력하세요 : ')
+
+#class 정의한 매서드 불러오기
+person_instance = Person()
+person_instance.input_name()
+person_instance.input_gender()
+person_instance.input_age()
+
+#입력하게한 내용을 보여주기
+print('당신은')
+print(f"이름은 {person_instance.name}, 성별은 {person_instance.gender}자이며")
+print(f"나이는 {person_instance.age}살 입니다.")
