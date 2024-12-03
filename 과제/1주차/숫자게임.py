@@ -24,18 +24,18 @@ def game():
                 print("틀렸다 숫자가 너무 크군")
             elif answer < correct: #input데이터와 랜덤으로 정한 숫자를 비교하여 정답으로 유도 할 수 있게함.
                 print("틀렸다 숫자가 너무 작군")
-        except ValueError:
+        except ValueError: #택스트나 유효하지 않은 입력이 있을 때
                 print("유효하지 않은 입력입니다. 숫자만 입력하세요")
 
-game()
+game() #게임을 실행
 
-while True:
+while True: #다시 게임을 실행하기 위한 반복문
     replay = input('하지만 이건 연습게임이었다. 다시한번 도전해볼텐가? y/n : ')
-    if replay in ['y','yes']:
+    if replay in ['y','yes']: #대답을 y와 yes로 만 입력하게 한후 계속 게임을 진행하게함
         print('좋다 이번엔 봐주지 않겠어')
         game()
-    elif replay in ['n','no']:
+    elif replay in ['n','no']:#대답을 n과 no로만 입력하게 한후 게임을 중단함
         print('겁쟁이로군....')
         break
-    else:
+    else: #그외의 대답을 입력했을때 게임이 종료되게함
         break
