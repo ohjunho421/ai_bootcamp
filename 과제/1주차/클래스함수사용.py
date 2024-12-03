@@ -41,10 +41,11 @@ print(f"이름은 {person_instance.name}, 성별은 {person_instance.gender}자�
 print(f"나이는 {person_instance.age}살 입니다.")
 
 
+age= person_instance.age
 
-    if int(person_instance.input_age()) > 33 :
-        print('저보다 형이시군요')
-    elif person_instance.input_age() == 33 :
-        print('반갑다 친구야')
-    elif person_instance.input_age() < 33 :
-        print('저보다 동생이시군요')
+if age > 33 :
+    print('저보다 형이시군요')
+elif age == 33 :
+    print('반갑다 친구야')
+elif age < 33 :
+    print('저보다 동생이시군요')
