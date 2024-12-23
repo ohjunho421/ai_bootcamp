@@ -1,13 +1,13 @@
 def solution(a, b):
-    answer = 0
-    lista = []
-    lista.append(str(a))
-    lista.append(str(b))
+    lista=[str(a)]
+    listb=[str(b)]
+    listab=lista + listb
 
-    addlist = int(''.join(lista))
-    if addlist > 2*a*b :
-        answer = addlist
-    else :
-        answer = 2*a*b
-        
-    return answer
+    ab="".join(listab)
+    ab=int(ab)
+    
+    if ab < 2*a*b :
+        return 2*a*b
+    else : 
+        return ab
+    return 
