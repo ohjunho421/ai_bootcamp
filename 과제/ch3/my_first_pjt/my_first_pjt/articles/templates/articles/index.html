@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>My First Django Project</h1>
+
+<img src="{% static "articles/IMG_7720.PNG" %}">
+
+<p>My first Django project is working!</p>
+<ul>
+  <li><a href="{% url 'articles:articles'%}"> Articles로 이동</a>
+  <li><a href="{% url 'articles:data_throw'%}"> Throw로 이동</a></li>
+  <li><a href="{% url 'users:users'%}"> Users로 이동</a></li>
+</ul>
+{% endblock content %}
